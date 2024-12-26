@@ -19,3 +19,16 @@ public class StringArrayHandler {
         }
         return strings.get(strings.size() - 1);
     }
+// Метод для вычисления средней длины строк в массиве
+    public double getAverageLength() {
+        if (strings.isEmpty()) {
+            return 0.0;
+        }
+        int totalLength = 0;
+        for (String str : strings) {
+            totalLength += str.length();
+        }
+        return (double) totalLength / strings.size();
+    }
+}
+
